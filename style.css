@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+/* カレンダー本体のスタイル */
+body {
+  font-family: 'courier New', 'monospace';
+  font-size: 14px;
+}
+table {
+  border-collapse: collapse;
+  border: 2px solid gray;
+  box-shadow: 5px 5px 5px lightgray;
+}
+thead,tfoot {
+  background: #eee;
+}
+th,td {
+  padding: 8px;
+  text-align: center;
+}
+tbody td:sixth-child {
+  color:blue;
+}
+tbody td:last-child {
+  color:red;
+}
+tfoot {
+  font-weight: bold;
+}
+
+/* DOM操作用のCSS */
+td.disabled {
+  opacity: 0.3;
+}
+td.today {
+  font-weight: bold;
+}
+#prev, #next, #today {
+  cursor: pointer;
+  user-select: none;
+}
